@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ResQ AI - Profile</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(135deg, #f8fbff, #e6f0ff);
+      text-align: center;
+      color: black;
+    }
+
+    /* 🔝 HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 25px;
+      background: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      height: 80px;
+    }
+
+    .back-btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* 📦 CARD */
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 400px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px #007bff33;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f1f1f1;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .section-title {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .emergency {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 🔝 HEADER -->
+<div class="header">
+  <img src="logo.png" class="logo">
+  <button class="back-btn" onclick="goHome()">⬅ Back</button>
+</div>
+
+<!-- 📦 PROFILE CARD -->
+<div class="card">
+
+  <h2>👤 Emergency Contacts</h2>
+
+  <input type="text" id="contact" placeholder="Enter phone number">
+  <br>
+  <button onclick="addContact()">Add Contact</button>
+
+  <ul id="contactList"></ul>
+
+  <div class="section-title">🚑 Emergency Numbers</div>
+
+  <div class="emergency">
+    <p>🚓 Police: 100</p>
+    <p>🚑 Ambulance: 102</p>
+    <p>🚒 Fire: 101</p>
+  </div>
+
+</div>
+
+<script type="module" src="profile.js"></script>
+
+<script>
+function goHome() {
+  window.location.href = "home.html";
+}
+</script>
+
+</body>
+</html>

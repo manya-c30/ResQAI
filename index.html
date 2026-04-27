@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ResQ AI - Login</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+
+      /* 🌞 LIGHT BACKGROUND WITH SOFT PATTERN */
+      background: linear-gradient(135deg, #f8fbff, #e6f0ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* 🚨 BACKGROUND ICONS (SUBTLE) */
+    body::before {
+      content: "🚑 🚨 ⚠️ 🏥 🚓 🚒";
+      position: absolute;
+      font-size: 80px;
+      opacity: 0.05;
+      top: 20%;
+      left: 10%;
+      transform: rotate(-20deg);
+    }
+
+    body::after {
+      content: "⚕️ 🚨 🚑 ⚠️";
+      position: absolute;
+      font-size: 70px;
+      opacity: 0.05;
+      bottom: 15%;
+      right: 10%;
+      transform: rotate(15deg);
+    }
+
+    /* 📦 CARD */
+    .card {
+      background: white;
+      padding: 30px;
+      width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+      z-index: 2;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #f42055;
+      margin-bottom: 5px;
+    }
+
+    .tagline {
+      font-size: 13px;
+      color: #2645e4;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px #007bff33;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .signup {
+      background: #000670;
+      color: white;
+    }
+
+    .login {
+      background: #c7173a;
+      color: white;
+    }
+
+    .reset {
+      background: transparent;
+      color: #007bff;
+      border: 1px solid #007bff;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    #msg {
+      margin-top: 10px;
+      font-size: 13px;
+      color: red;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <!-- 🖼 YOUR LOGO -->
+  <img src="logo.png" class="logo">
+
+  <h1>ResQ AI</h1>
+  <p class="tagline">Rescue Reinvented by AI</p>
+
+  <input type="email" id="email" placeholder="Email address">
+  <input type="password" id="password" placeholder="Password">
+
+  <button class="signup" onclick="signup()">Sign Up</button>
+  <button class="login" onclick="login()">Login</button>
+  <button class="reset" onclick="resetPassword()">Forgot Password</button>
+
+  <p id="msg"></p>
+
+</div>
+
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>
